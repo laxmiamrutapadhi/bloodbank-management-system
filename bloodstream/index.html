@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bloodstream — Donate Blood, Save Lives</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="index.html" class="logo">Blood<span>stream</span></a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="find.html">Find Donor</a>
+    <a href="register.html">Register</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
+    <button id="openAuth" class="btn btn-primary">Login</button>
+    <span id="userBadge" class="user-badge hidden"></span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1600&q=80');">
+  <div class="hero-inner">
+    <p class="eyebrow">Every drop counts</p>
+    <h1>Donate Blood.<br/><em>Save a Life.</em></h1>
+    <p class="lead">Bloodstream connects donors with people in urgent need — fast, free, and local.</p>
+    <div class="hero-cta">
+      <a href="register.html" class="btn btn-primary">Become a Donor</a>
+      <a href="find.html" class="btn btn-ghost">Find a Donor →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div><h2>10K+</h2><p>Registered Donors</p></div>
+  <div><h2>3.2K</h2><p>Lives Saved</p></div>
+  <div><h2>50+</h2><p>Cities Covered</p></div>
+  <div><h2>24/7</h2><p>Emergency Support</p></div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="why-grid">
+    <div class="why-img" style="background-image:url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80');"></div>
+    <div class="why-text">
+      <p class="eyebrow">Why Bloodstream</p>
+      <h2>One donation. <em>Three lives.</em></h2>
+      <p>A single unit of blood can be split into red cells, plasma, and platelets — saving up to three different patients. Your 15 minutes can give someone years.</p>
+      <ul>
+        <li>✓ Verified donor profiles</li>
+        <li>✓ Search by city &amp; blood group</li>
+        <li>✓ Direct contact, no middlemen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AUTH OVERLAY -->
+<div id="authOverlay" class="overlay hidden">
+  <div class="auth-card">
+    <button class="close" onclick="closeAuth()">×</button>
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Login</button>
+      <button class="tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <form id="loginForm" class="auth-form">
+      <h3>Welcome back</h3>
+      <input type="text" name="username" placeholder="Username" required/>
+      <input type="password" name="password" placeholder="Password" required/>
+      <button class="btn btn-primary" type="submit">Login</button>
+      <p class="auth-msg" id="loginMsg"></p>
+    </form>
+
+    <form id="signupForm" class="auth-form hidden">
+      <h3>Create your account</h3>
+      <input type="text" name="username" placeholder="Username" required/>
+      <input type="email" name="email" placeholder="Email" required/>
+      <input type="password" name="password" placeholder="Password (min 6)" minlength="6" required/>
+      <button class="btn btn-primary" type="submit">Sign Up</button>
+      <p class="auth-msg" id="signupMsg"></p>
+    </form>
+
+    <button class="guest-btn" onclick="continueAsGuest()">Continue as Guest →</button>
+  </div>
+</div>
+
+<footer class="foot">
+  <p>© 2026 Bloodstream · Made with ♥ for humanity</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

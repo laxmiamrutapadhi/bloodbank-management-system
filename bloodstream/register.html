@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Become a Donor — Bloodstream</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="logo">Blood<span>stream</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="find.html">Find Donor</a>
+    <a href="register.html" class="active">Register</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn">🌙</button>
+    <button id="openAuth" class="btn btn-primary">Login</button>
+    <span id="userBadge" class="user-badge hidden"></span>
+  </div>
+</header>
+
+<section class="page-hero" style="background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1542884748-2b87b36c6b90?auto=format&fit=crop&w=1600&q=80');">
+  <h1>Become a <em>Donor</em></h1>
+  <p>Join thousands of heroes. It only takes a minute.</p>
+</section>
+
+<section class="container narrow">
+  <form id="donorForm" class="donor-form">
+    <div class="row">
+      <input name="fullName" placeholder="Full name" required/>
+      <input name="age" type="number" min="18" max="65" placeholder="Age" required/>
+    </div>
+    <div class="row">
+      <select name="bloodGroup" required>
+        <option value="">Blood Group</option>
+        <option>A+</option><option>A-</option>
+        <option>B+</option><option>B-</option>
+        <option>O+</option><option>O-</option>
+        <option>AB+</option><option>AB-</option>
+      </select>
+      <input name="phone" placeholder="Phone number" required/>
+    </div>
+    <div class="row">
+      <input name="city" placeholder="City" required/>
+      <input name="state" placeholder="State" required/>
+    </div>
+    <textarea name="address" rows="3" placeholder="Full address (optional)"></textarea>
+    <button class="btn btn-primary" type="submit">Register as Donor</button>
+    <p id="donorMsg" class="auth-msg"></p>
+  </form>
+</section>
+
+<footer class="foot"><p>© 2026 Bloodstream</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

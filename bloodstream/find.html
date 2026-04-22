@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Find a Donor — Bloodstream</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="logo">Blood<span>stream</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="find.html" class="active">Find Donor</a>
+    <a href="register.html">Register</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn">🌙</button>
+    <button id="openAuth" class="btn btn-primary">Login</button>
+    <span id="userBadge" class="user-badge hidden"></span>
+  </div>
+</header>
+
+<section class="page-hero" style="background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=1600&q=80');">
+  <h1>Find a <em>Donor</em></h1>
+  <p>Search verified donors by blood group and location.</p>
+</section>
+
+<section class="container">
+  <form id="searchForm" class="search-bar">
+    <select name="bloodGroup">
+      <option value="">All Blood Groups</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>O+</option><option>O-</option>
+      <option>AB+</option><option>AB-</option>
+    </select>
+    <input type="text" name="city" placeholder="Enter city..."/>
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+
+  <div id="donorList" class="donor-grid"></div>
+</section>
+
+<footer class="foot"><p>© 2026 Bloodstream</p></footer>
+<script src="script.js"></script>
+<script>loadDonors();</script>
+</body>
+</html>
