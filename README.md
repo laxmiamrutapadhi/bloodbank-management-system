@@ -1,6 +1,6 @@
 
 A web-based application that efficiently manages donor information and enables quick search for blood based on group and location, helping save time during emergencies.
-## Steps to Run the Project (Using XAMPP)
+### Steps to Run the Project (Using XAMPP)
 
 1. Install and open **XAMPP Control Panel**  
 2. Start **Apache** and **MySQL**
